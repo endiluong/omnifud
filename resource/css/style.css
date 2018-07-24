@@ -185,7 +185,8 @@ a:active {
 /* ------------------------------------------ */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
    display: inline-block;
    padding: 10px 30px;
    font-weight: 300;
@@ -196,7 +197,8 @@ a:active {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
    background-color: #e67e22;
    border: 1px solid #e67e22;
    margin-right: 15px;
@@ -209,12 +211,15 @@ a:active {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
    background-color: #cf6d17;
 }
 
 .btn-full:hover,
-.btn-full:active {
+.btn-full:active,
+   {
    background-color: #cf6d17;
    border: 1px solid #cf6d17;
 }
@@ -447,7 +452,7 @@ blockquote::before {
    content: "\201C";
    font-size: 500%;
    position: absolute;
-   top:-5px;
+   top: -5px;
    left: -5px;
 }
 
@@ -463,6 +468,7 @@ cite img {
    margin-right: 10px;
    vertical-align: middle;
 }
+
 /* ------------------------------------------*/
 
 /* PLAN */
@@ -470,50 +476,60 @@ cite img {
 /* ZLUD SIGNATURE */
 
 /* ------------------------------------------ */
-.section-plans{
+
+.section-plans {
    background-color: #f4f4f4;
 }
-.plan-box{
+
+.plan-box {
    background-color: #fff;
    border-radius: 5px;
-   width:90%;
-   margin-left:5%;
+   width: 90%;
+   margin-left: 5%;
    box-shadow: 0 2px 2px #efefef;
 }
-.plan-box ul{
+
+.plan-box ul {
    list-style-type: none;
 }
-.plan-box ul li{
+
+.plan-box ul li {
    padding: 5px 0;
 }
 
-.plan-box div{
+.plan-box div {
    padding: 15px;
    border-bottom: 1px solid #e8e8e8;
 }
-.plan-box div:first-child{
+
+.plan-box div:first-child {
    background-color: #fcfcfc;
    border-top-left-radius: 5px;
    border-top-right-radius: 5px;
 }
-.plan-box div:last-child{
+
+.plan-box div:last-child {
    text-align: center;
 }
-.plan-price{
+
+.plan-price {
    font-size: 300%;
    font-weight: 100;
    margin-bottom: 10px;
    color: #e67e22;
    text-align: center;
 }
-.plan-price span{
+
+.plan-price span {
    font-size: 30%;
    font-weight: 300;
 }
-.plan-price-meal{
+
+.plan-price-meal {
    font-size: 80%;
    text-align: center;
 }
+
 /* ------------------------------------------*/
 
 /* FORM */
@@ -521,3 +537,110 @@ cite img {
 /* ZLUD SIGNATURE */
 
 /* ------------------------------------------ */
+
+.contact-form {
+   width: 60%;
+   margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+   width: 100%;
+   padding: 7px;
+   border-radius: 3px;
+   border: 1px solid #ccc;
+}
+
+input[type=checkbox] {
+   margin: 10px 5px 10px 0;
+}
+
+*:focus {
+   outline: none;
+}
+
+/* ------------------------------------------*/
+
+/* FOOTER */
+
+/* ZLUD SIGNATURE */
+
+/* ------------------------------------------ */
+
+footer {
+   background-color: #333;
+   padding: 50px;
+   font-size: 80%;
+}
+
+.footer-nav {
+   list-style-type: none;
+   float: left;
+}
+
+.social-icons {
+   list-style: none;
+   float: right;
+}
+
+.footer-nav li,
+.social-icons li {
+   display: inline-block;
+   margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-icons li:last-child {
+   margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-icons li a:link,
+.social-icons li a:visited {
+   text-decoration: none;
+   border: 0;
+   color: #888;
+   transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+   color: #ddd;
+}
+
+.social-icons li a:link,
+.social-icons li a:visited {
+   font-size: 160%;
+}
+
+.ion-social-facebook,
+.ion-social-instagram,
+.ion-social-google,
+.ion-social-github {
+   transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+   color: #3b5999;
+}
+
+.ion-social-instagram:hover {
+   color: #e4405f;
+}
+
+.ion-social-google:hover {
+   color: #dd4b39;
+}
+
+.ion-social-github:hover {
+   color: #6e5494;
+}
+
+footer p {
+   color: #888;
+   text-align: center;
+   margin-top: 20px;
+}
