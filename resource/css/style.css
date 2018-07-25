@@ -21,6 +21,7 @@
 * {
    margin: 0;
    padding: 0;
+   -webkit-box-sizing: border-box;
    box-sizing: border-box;
 }
 
@@ -171,6 +172,7 @@ a:visited {
    color: #e67e22;
    padding-bottom: 1px;
    border-bottom: 1px solid #e67e22;
+   -webkit-transition: border-bottom 0.2s, color 0.2s;
    transition: border-bottom 0.2s, color 0.2s;
 }
 
@@ -195,6 +197,7 @@ input[type=submit] {
    text-decoration: none;
    border-radius: 200px;
    color: white;
+   -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
    transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
@@ -241,6 +244,7 @@ input[type=submit]:active {
 /* ------------------------------------------ */
 
 header {
+   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg);
    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
    background-attachment: fixed;
    background-size: cover;
@@ -254,6 +258,7 @@ header {
    width: 1140px;
    top: 50%;
    left: 50%;
+   -webkit-transform: translate(-50%, -50%);
    transform: translate(-50%, -50%);
 }
 
@@ -263,6 +268,16 @@ header {
    float: left;
    margin-top: 20px;
 }
+
+.Logo-black {
+   height: 50px;
+   width: auto;
+   float: left;
+   margin-top: 5px 0;
+   display: none;
+}
+
+/* Main nav*/
 
 .main-nav {
    float: right;
@@ -283,12 +298,44 @@ header {
    text-transform: uppercase;
    font-size: 90%;
    border-bottom: 2px solid transparent;
+   -webkit-transition: border-bottom 0.2s;
    transition: border-bottom 0.2s;
 }
 
 .main-nav li a:hover,
 .main-nav li a:active {
    border-bottom: 2px solid #e67e22;
+}
+
+/* Sticky Mav */
+
+.sticky {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0.98);
+   -webkit-box-shadow: 0 2px 2px #efefef;
+   box-shadow: 0 2px 2px #efefef;
+   z-index: 99999;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+   padding: 13px 0;
+   color: #555;
+}
+
+.sticky .main-nav {
+   margin-top: 15px;
+}
+
+.sticky .Logo {
+   display: none;
+}
+
+.sticky .Logo-black {
+   display: block;
 }
 
 /* ------------------------------------------*/
@@ -338,12 +385,17 @@ header {
    opacity: 0.7;
    width: 100%;
    height: auto;
+   -webkit-transform: scale(1.15);
    transform: scale(1.15);
+   -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+   transition: opacity 0.5s, -webkit-transform 0.5s;
    transition: transform 0.5s, opacity 0.5s;
+   transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 .meal-photo img:hover {
    opacity: 1;
+   -webkit-transform: scale(1.03);
    transform: scale(1.03);
 }
 
@@ -435,6 +487,7 @@ header {
 /* ------------------------------------------ */
 
 .section-testimonials {
+   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/back-customers.jpg);
    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/back-customers.jpg);
    background-size: cover;
    color: white;
@@ -447,6 +500,7 @@ blockquote {
    font-style: italic;
    line-height: 145%;
    margin-top: 40px;
+   text-align: justify;
 }
 
 blockquote::before {
@@ -488,6 +542,7 @@ cite img {
    border-radius: 5px;
    width: 90%;
    margin-left: 5%;
+   -webkit-box-shadow: 0 2px 2px #efefef;
    box-shadow: 0 2px 2px #efefef;
 }
 
@@ -605,6 +660,7 @@ footer {
    text-decoration: none;
    border: 0;
    color: #888;
+   -webkit-transition: color 0.2s;
    transition: color 0.2s;
 }
 
@@ -622,6 +678,7 @@ footer {
 .ion-social-instagram,
 .ion-social-google,
 .ion-social-github {
+   -webkit-transition: color 0.2s;
    transition: color 0.2s;
 }
 
@@ -645,4 +702,32 @@ footer p {
    color: #888;
    text-align: center;
    margin-top: 20px;
+}
+
+/* ------------------------------------------*/
+
+/* ANIMATION */
+
+/* ZLUD SIGNATURE */
+
+/* ------------------------------------------ */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+   opacity: 0;
+   -webkit-animation-duration: 1s;
+   animation-duration: 1s;
+}
+
+.js--wp-4,
+.js--wp-5 {
+   -webkit-animation-duration: 1s;
+   animation-duration: 1s;
+}
+
+.js--wp-1 .animated,
+.js--wp-2 .animated,
+.js--wp-3 .animated {
+   opacity: 1;
 }
