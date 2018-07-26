@@ -190,4 +190,17 @@
    .plan-price {
       font-size: 300%;
    }
+
+   .map{
+      position: relative;
+      height: 300px;
+   }
+   .form-box{
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding: 30px 0;
+      background-color: #fff;
+   }
+
 }

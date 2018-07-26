@@ -76,4 +76,20 @@ $(document).ready(function () {
       icon.removeClass('ion-close-round')
     }
   })
+  var map = new GMaps({
+    div: '.map',
+    lat: 10.7464338,
+    lng: 106.7596335,
+    zoom: 12
+  });
+
+  map.addMarker({
+    lat: 10.768206,
+    lng: 106.6990567,
+    title: 'Omnifood',
+    click: function (e) {
+      alert('Hi there, it is just an unreal Location');
+    }
+  });
+
 });
